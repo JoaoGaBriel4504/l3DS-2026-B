@@ -1,11 +1,12 @@
 import React from 'react'
 
-const perfil = () => {
+const Perfil = ({children, fotoPerfil}) => {
   return (
-    <div>
-      perfil
-    </div>
+    <div className="Perfil">
+      <img src={fotoPerfil} alt="" />
+      <p>@{children}</p>
+      </div>
   )
 }
 
-export default perfil
+export default Perfil
