@@ -1,9 +1,9 @@
-import React, { Children } from 'react'
+import React from 'react'
 
-const Rodape = () => {
+const Rodape = ({children}) => {
   return (
     <footer>
-      <p>Feito com ❤️ por <a href="https://github.com">{Children}</a>
+      <p>Feito com ❤️ por <a href="https://github.com">{children}</a>
       </p>
     </footer>
   )
