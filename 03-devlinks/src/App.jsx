@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Perfil from "./components/Perfil/Perfil";
 import Link from "./components/Link/Link";
@@ -6,12 +7,18 @@ import Rodape from "./components/Rodape/Rodape";
 import Switch from "./components/Switch/Switch";
 
 function App() {
+  const[islight,setIslight] = useState(true);
+
+const troca = () => {
+  setIslight(!islight);
+
+};
   return (
-    <div id="App">
+    <div id="App" className={islight ? "light" : ""}>
 
     <Perfil fotoPerfil={"https://placehold.co/100"}> Joao Gabriel</Perfil>
 
-<Switch />
+<Switch troca={troca} islight={islight}/>
 
      <div id="Link">
       <ul>

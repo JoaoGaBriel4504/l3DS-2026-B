@@ -29,32 +29,32 @@
 
 & span {
   display: block;
-    width: 64px;
-    height: 24px;
-    background-color: var(--surface-color);
-    border: 1px solid var(--stroke-color);
-    border-radius: 999px;
+  width: 64px;
+  height: 24px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 999px;
 }
 
 .light #Switch button {
-    animation: slide-in 0.2s forwards;
+  animation: slide-in 0.2s forwards;
 }
 
 /* Animação */
 @keyframes slide-in {
   from {
-    left: 50%;
+    left: 0%;
   }
   to {
-    left: 0;
+    left: 55%;
   }
 }
 
 @keyframes slide-out {
   from {
-    left: 0;
+    left: 50%;
   }
   to {
-    left: 50%;
+    left: 0%;
   }
 }
