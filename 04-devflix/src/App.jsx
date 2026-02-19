@@ -17,7 +17,7 @@ const App = () => {
         <img src={lupa} alt="Botão de ação para pesquisa" />
       </div>
 
-      <Rodape>Joao Gabriel</Rodape>
+      <Rodape link="https://github.com/JoaoGaBriel4504">Joao Gabriel</Rodape>
     </div>
   );
 };
