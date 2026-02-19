@@ -1,46 +1,43 @@
 import { useState } from "react";
 import "./App.css";
-import Perfil from "./components/Perfil/Perfil";
 import Link from "./components/Link/Link";
-import SocialLink from "./components/SocialLink/SocialLink";
+import Perfil from "./components/Perfil/Perfil";
 import Rodape from "./components/Rodape/Rodape";
+import SocialLink from "./components/SocialLink/SocialLink";
 import Switch from "./components/Switch/Switch";
+import foto from "./assets/896868c977e93adf2ae33e3011bc8c7c.jpg"
 
 function App() {
-  const[islight,setIslight] = useState(true);
+  const [isLight, setIsLight] = useState(true);
 
-const troca = () => {
-  setIslight(!islight);
+  const troca = () => {
+    setIsLight(!isLight);
+  };
 
-};
   return (
-    <div id="App" className={islight ? "light" : ""}>
+    <div id="App" className={isLight ? "light" : ""}>
+      <Perfil fotoPerfil={foto}>Joao Gabriel</Perfil>
 
-    <Perfil fotoPerfil={"https://placehold.co/100"}> Joao Gabriel</Perfil>
+      <Switch troca={troca} isLight={isLight} />
 
-<Switch troca={troca} islight={islight}/>
-
-     <div id="Link">
-      <ul>
-        <Link url={""}>Increva-se</Link>
-        <Link url={""}>Minha playlist</Link>
-        <Link url={""}>Me pague um café!</Link>
-        <Link url={""}>Conheça o curso DEV</Link>
-      </ul>
-     </div>
-
+      <div id="Link">
+        <ul>
+          <Link url={""}>Inscreva-se</Link>
+          <Link url={""}>Minha playlist</Link>
+          <Link url={""}>Me pague um café!</Link>
+          <Link url={""}>Conheça o Curso DEV</Link>
+        </ul>
+      </div>
 
       <div id="SocialLinks">
-        <SocialLink url={"https://github.com"} icon={"logo-github"} />
-        <SocialLink url={"https://instagram.com"} icon={"logo-instagram"} />
-        <SocialLink url={"https://youtube.com"} icon={"logo-youtube"} />
-        <SocialLink url={"https://linkedin.com"} icon={"logo-linkedin"} />
+        <SocialLink url={"https://github.com/JoaoGaBriel4504"} icon={"logo-github"} />
+        <SocialLink url={"https://instagram.com/Pablo Hernandez"} icon={"logo-instagram"} />
+        <SocialLink url={"https://youtube.com/@mayconlorenz"} icon={"logo-youtube"} />
+        <SocialLink url={"https://br.linkedin.com/"} icon={"logo-linkedin"} />
       </div>
-      
-
- <Rodape>JoaoGabriel</Rodape>
+      <Rodape>ProfCastello</Rodape>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

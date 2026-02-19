@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Switch.module.css";
 
-const Switch = ({troca, islight}) => {
+const Switch = ({ troca, isLight }) => {
   return (
-    <div className={islight ? styles.light : ""}>
+    <div className={isLight ? styles.light : ""}>
       <div onClick={troca} id={styles.Switch}>
         <button></button>
         <span></span>
@@ -12,4 +12,4 @@ const Switch = ({troca, islight}) => {
   );
 };
 
-export default Switch
+export default Switch;
